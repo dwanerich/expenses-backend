@@ -1,9 +1,9 @@
+
 class AccountsController < ApplicationController
 
     def index
-        @accounts = Accounts.all
+        @accounts = Account.all
         render json: @accounts
-
     end
 
     def create

@@ -2,7 +2,6 @@ Rails.application.routes.draw do
   
   # nested routing below this prevents routes of transactions not associated with an account
   
-  resources :accounts
   resources :accounts do
     resources :transactions
   end
