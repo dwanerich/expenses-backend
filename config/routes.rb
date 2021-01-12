@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
-  resources :transactions
+  
+  # nested routing below this prevents routes of transactions not associated with an account
+  
   resources :accounts
+  resources :accounts do
+    resources :transactions
+  end
 end
 
 # fetch('http://localhost:3000/transactions')
